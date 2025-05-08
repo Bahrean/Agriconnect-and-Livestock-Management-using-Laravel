@@ -18,7 +18,7 @@
         </div>
 
         <div class="actions-section" style="width: 100%;">
-            <div class="card p-4 shadow">
+            <div class="card p-4 shadow" style="background-color:#001B07;">
                 <h5 class="card-title text-center mb-4">Quick Actions</h5>
                 <div class="row g-4">
                     <div class="col-md-4">
