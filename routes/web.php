@@ -298,6 +298,28 @@ Route::prefix('send-to-farmer')->group(function () {
 
 });
 
+Route::prefix('send-to-expert')->group(function () {
+    Route::get('/create', [SendToExpertController::class, 'create'])->name('send_to_expert.create');
+    Route::post('/store', [SendToExpertController::class, 'store'])->name('send_to_expert.store');
+    Route::get('/', [SendToExpertController::class, 'index'])->name('send_to_expert.index');
+
+    Route::get('/{id}/edit', [SendToExpertController::class, 'edit'])->name('send_to_expert.edit');
+    Route::put('/{id}', [SendToExpertController::class, 'update'])->name('send_to_expert.update');
+    Route::delete('/{id}', [SendToExpertController::class, 'destroy'])->name('send_to_expert.destroy');
+
+});
+
+Route::prefix('send-to-buyer')->group(function () {
+    Route::get('/create', [SendToBuyerController::class, 'create'])->name('send_to_buyer.create');
+    Route::post('/store', [SendToBuyerController::class, 'store'])->name('send_to_buyer.store');
+    Route::get('/', [SendToBuyerController::class, 'index'])->name('send_to_buyer.index');
+
+    Route::get('/{id}/edit', [SendToBuyerController::class, 'edit'])->name('send_to_buyer.edit');
+    Route::put('/{id}', [SendToBuyerController::class, 'update'])->name('send_to_buyer.update');
+    Route::delete('/{id}', [SendToBuyerController::class, 'destroy'])->name('send_to_buyer.destroy');
+
+});
+
 });
 
 Route::middleware(['auth', 'role:collage_dean'])->group(function () {

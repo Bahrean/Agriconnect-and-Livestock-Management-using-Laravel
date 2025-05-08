@@ -1,22 +1,28 @@
 @extends('admin.admin_dashboard')
 @section('admin')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-header">Market Prices from Firebase</div>
 
-                <div class="card-body">
+<div class="page-content" style="padding: 25px 15px;">
+
+    <!-- Members Table Section -->
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card shadow">
+                <div class="card-body" style="background-color:#001B07">
+                    <h6 class="card-title text-center" style="color: #001F77; font-size: 25px;font-weight: bold;">
+                        <i class="fas fa-users"></i> Show Recorded Market Price
+                    </h6>
+
+                    <div class="table-responsive">
                     @if($marketPrices)
-                        <table class="table table-striped">
-                            <thead>
+                        <table id="dataTableExample" class="table table-bordered table-striped">
+                            <thead style="background-color:#001F77">
                                 <tr>
-                                    <th>Item Name</th>
-                                    <th>Price</th>
-                                    <th>Market Location</th>
-                                    <th>Date Recorded</th>
-                                    <th>Created At</th>
-                                    <th>Actions</th>
+                                    <th style="font-size: 17px; color: white; font-weight: bold;">Item Name</th>
+                                    <th style="font-size: 17px; color: white; font-weight: bold;">Price</th>
+                                    <th style="font-size: 17px; color: white; font-weight: bold;">Market Location</th>
+                                    <th style="font-size: 17px; color: white; font-weight: bold;">Date Recorded</th>
+                                    <th style="font-size: 17px; color: white; font-weight: bold;">Created At</th>
+                                    <th style="font-size: 17px; color: white; font-weight: bold;">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -39,12 +45,15 @@
                                 @endforeach
                             </tbody>
                         </table>
-                    @else
+                        @else
                         <p>No market prices found in Firebase.</p>
                     @endif
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection

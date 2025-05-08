@@ -1,5 +1,6 @@
 @extends('admin.admin_dashboard')
 @section('admin')
+<div class="page-content" style="padding: 25px 15px;">
 <div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -65,5 +66,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

@@ -29,8 +29,8 @@
                                         <td>{{ $price['date_recorded'] ?? 'N/A' }}</td>
                                         <td>{{ $price['created_at'] ?? 'N/A' }}</td>
                                         <td>
-                                            <a href="{{ route('market-price.edit', $firebaseKey) }}" class="btn btn-sm btn-primary">Edit</a>
-                                            <form action="{{ route('market-price.destroy', $firebaseKey) }}" method="POST" style="display: inline;">
+                                            <a href="{{ route('send_to_expert.edit', $firebaseKey) }}" class="btn btn-sm btn-primary">Edit</a>
+                                            <form action="{{ route('send_to_expert.destroy', $firebaseKey) }}" method="POST" style="display: inline;">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>

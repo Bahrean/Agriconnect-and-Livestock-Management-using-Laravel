@@ -1,26 +1,32 @@
 @extends('admin.admin_dashboard')
 @section('admin')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-11">
-            <div class="card">
-                <div class="card-header">Market Prices from Firebase</div>
 
-                <div class="card-body">
+<div class="page-content" style="padding: 25px 15px;">
+
+    <!-- Members Table Section -->
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card shadow">
+                <div class="card-body" style="background-color:#001B07">
+                    <h6 class="card-title text-center" style="color: #001F77; font-size: 25px;font-weight: bold;">
+                        <i class="fas fa-users"></i> Show All Agriculture Expert
+                    </h6>
+
+                    <div class="table-responsive">
                     @if($agriexpert)
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Message</th>
-                                    <th>Created At</th>
-                                    <th>Actions</th>
-                                </tr>
+                        <table id="dataTableExample" class="table table-bordered table-striped">
+                            <thead style="background-color:#001F77">
+                            <tr>
+                                <th style="font-size: 17px; color: white; font-weight: bold;">Name</th>
+                                <th style="font-size: 17px; color: white; font-weight: bold;">Email</th>
+                                <th style="font-size: 17px; color: white; font-weight: bold;">Message</th>
+                                <th style="font-size: 17px; color: white; font-weight: bold;">Created At</th>
+                                <th style="font-size: 17px; color: white; font-weight: bold;">Actions</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                @foreach($agriexpert as $firebaseKey => $email)
-                                    <tr>
+                            @foreach($agriexpert as $firebaseKey => $email)
+                            <tr>
                                         <td>{{ $email['name'] ?? 'N/A' }}</td>
                                         <td>{{ $email['email'] ?? 'N/A' }}</td>
                                         <td>{{ $email['message'] ?? 'N/A' }}</td>
@@ -37,12 +43,15 @@
                                 @endforeach
                             </tbody>
                         </table>
-                    @else
+                        @else
                         <p>No market prices found in Firebase.</p>
                     @endif
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection

@@ -1,10 +1,11 @@
 @extends('admin.admin_dashboard')
 @section('admin')
+<div class="page-content" style="padding: 25px 15px;">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Add Market Price</div>
+                <div class="card-header">Send to Farmer</div>
 
                 <div class="card-body">
                     @if (session('success'))
@@ -43,8 +44,6 @@
                                 @enderror
                             </div>
                         </div>
-
-    
 
                         <div class="form-group row">
                             <label for="status" class="col-md-4 col-form-label text-md-right">Status</label>
@@ -86,5 +85,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection
