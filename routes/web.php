@@ -12,9 +12,15 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CollegePostController;
 use App\Http\Controllers\DepartmentPostController;
 use App\Http\Controllers\FirebaseController;
+use App\Http\Controllers\SendToFarmerController;
+use App\Http\Controllers\SendToExpertController;
+use App\Http\Controllers\SendToBuyerController;
 use App\Http\Livewire\Chat\Chat;
 use App\Http\Livewire\Chat\Index;
 use App\Http\Livewire\Users;
+
+use App\Http\Controllers\MarketPriceController;
+use App\Http\Controllers\FirebaseUserController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -41,9 +47,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::get('/form', [FirebaseController::class, 'showForm'])->name('firebase.form');
 
-Route::post('/form', [FirebaseController::class, 'submitForm'])->name('firebase.store');
 
 
 Route::middleware('auth')->group(function () {
@@ -251,6 +255,49 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         AdminController::class,
         'AdminAddAgricultureExpert',
     ])->name('admin.addagricultureexpert');
+
+
+Route::get('/form', [FirebaseController::class, 'showForm'])->name('firebase.form');
+
+Route::post('/form', [FirebaseController::class, 'submitForm'])->name('firebase.store');
+Route::get('/agriexpertview', [FirebaseController::class, 'index'])->name('agriexpert.index');
+
+
+Route::get('/agriexpert/{id}/edit', [FirebaseController::class, 'edit'])->name('agriexpert.edit');
+Route::put('/agriexpert/{id}', [FirebaseController::class, 'update'])->name('agriexpert.update');
+Route::delete('/agriexpert/{id}', [FirebaseController::class, 'destroy'])->name('agriexpert.destroy');
+
+
+Route::prefix('market-price')->group(function () {
+    Route::get('/create', [MarketPriceController::class, 'create'])->name('market-price.create');
+    Route::post('/store', [MarketPriceController::class, 'store'])->name('market-price.store');
+    Route::get('/', [MarketPriceController::class, 'index'])->name('market-price.index');
+
+    Route::get('/{id}/edit', [MarketPriceController::class, 'edit'])->name('market-price.edit');
+    Route::put('/{id}', [MarketPriceController::class, 'update'])->name('market-price.update');
+    Route::delete('/{id}', [MarketPriceController::class, 'destroy'])->name('market-price.destroy');
+
+});
+
+
+
+Route::prefix('firebase/users')->group(function () {
+    Route::get('/', [FirebaseUserController::class, 'index'])->name('firebase.users.index');
+    Route::get('/sync', [FirebaseUserController::class, 'sync'])->name('firebase.users.sync');
+});
+
+
+Route::prefix('send-to-farmer')->group(function () {
+    Route::get('/create', [SendToFarmerController::class, 'create'])->name('send_to_farmer.create');
+    Route::post('/store', [SendToFarmerController::class, 'store'])->name('send_to_farmer.store');
+    Route::get('/', [SendToFarmerController::class, 'index'])->name('send_to_farmer.index');
+
+    Route::get('/{id}/edit', [SendToFarmerController::class, 'edit'])->name('send_to_farmer.edit');
+    Route::put('/{id}', [SendToFarmerController::class, 'update'])->name('send_to_farmer.update');
+    Route::delete('/{id}', [SendToFarmerController::class, 'destroy'])->name('send_to_farmer.destroy');
+
+});
+
 });
 
 Route::middleware(['auth', 'role:collage_dean'])->group(function () {

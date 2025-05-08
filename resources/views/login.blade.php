@@ -57,7 +57,7 @@
     
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #1B5E20;
+      background-color: #001B07;
       overflow-x: hidden;
       min-height: 100vh;
       display: flex;
@@ -74,7 +74,7 @@
       align-items: center;
       min-height: 100vh;
       padding: 20px;
-      background-color: #1B5E20;
+      background-color: #001B07;
     }
     
     .auth-container {
@@ -92,7 +92,7 @@
       box-shadow: 0 10px 30px -10px rgba(255,255,255,0.1);
       transform-style: preserve-3d;
       transition: var(--transition);
-      background: rgba(255, 255, 255, 0.1);
+    
       width: 100%;
       position: relative;
       backdrop-filter: blur(10px);
@@ -106,7 +106,7 @@
     
     .auth-form-wrapper {
       padding: 3rem;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 8, 2, 0.7);
       position: relative;
       z-index: 1;
       height: 100%;
