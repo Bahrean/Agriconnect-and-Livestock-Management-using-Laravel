@@ -32,7 +32,9 @@ return [
     ],
 
     'firebase' => [
-        'credentials' => storage_path('app/flutter-firebase-cloudinary2-firebase-adminsdk-fbsvc-8ed1d3674b.json'),
+        'credentials' => env('FIREBASE_CREDENTIALS_PATH', storage_path('app/flutter-firebase-cloudinary2-firebase-adminsdk-fbsvc-8ed1d3674b.json')),
+        'database_url' => env('FIREBASE_DATABASE_URL', 'https://flutter-firebase-cloudinary2-default-rtdb.firebaseio.com'),
     ],
+
 
 ];
