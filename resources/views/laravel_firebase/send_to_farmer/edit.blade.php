@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Edit Market Price</div>
+                <div class="card-header">Edit Farmer Sent</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('market-price.update', $firebaseKey) }}">
