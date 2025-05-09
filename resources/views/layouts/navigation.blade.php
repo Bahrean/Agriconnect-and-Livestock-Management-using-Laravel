@@ -1,13 +1,10 @@
 <nav  x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
-    <div style="background-color: rgb(10, 21, 46);" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div style="background-color: #001B07;" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
         <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <img style="width:60px;height:60px" src="{{asset('upload/wollo_university.jpg')}}" alt="" >
-
-                </div>
+    
 
                 <!-- Navigation Links -->
 
