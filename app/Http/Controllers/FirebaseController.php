@@ -27,7 +27,9 @@ class FirebaseController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string',
-            'message' => 'required|string|max:255',
+            'password' => 'required|string',
+            'proffesion' => 'required|string',
+        
             
         ]);
 
@@ -52,7 +54,8 @@ class FirebaseController extends Controller
             ->push([
                 'name' => $message->name,
                 'email' => $message->email,
-                'message' => $message->message,
+                'password' => $message->password,
+                'proffesion' => $message->proffesion,
                 'created_at' => Carbon::now()->toDateTimeString(),
             ]);
     }
@@ -91,7 +94,9 @@ class FirebaseController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|max:255',
-            'message' => 'required|string|max:255',
+            'password' => 'required|string|max:255',
+            'proffesion' => 'required|string|max:255',
+        
         
         ]);
     
@@ -100,7 +105,8 @@ class FirebaseController extends Controller
             $database->getReference('messages/'.$firebaseKey)->update([
                 'name' => $validatedData['name'],
                 'email' => $validatedData['email'],
-                'message' => $validatedData['message'],
+                'password' => $validatedData['password'],
+                'proffesion' => $validatedData['proffesion'],
             
                 'updated_at' => now()->toDateTimeString(),
             ]);
