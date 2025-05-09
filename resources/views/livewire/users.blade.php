@@ -7,7 +7,7 @@
 
 
 
-<div style="background-color:rgb(60, 87, 145)" class="max-w-6xl mx-auto my-16 px-4">
+<div style="background-color:#001B07;" class="max-w-6xl mx-auto my-16 px-4">
 
 <form 
         action="{{ 
