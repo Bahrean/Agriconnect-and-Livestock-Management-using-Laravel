@@ -11,19 +11,19 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<div class="page-content" style="margin-top:28px;">
+<div class="page-content" style="margin-top:80px; ">
 
 <div class="row profile-body">
   <!-- left wrapper start -->
 
   <!-- left wrapper end -->
   <!-- middle wrapper start -->
-  <div class="col-md-8 col-xl-8 middle-wrapper">
+  <div class="col-md-10 col-xl-10 middle-wrapper" >
     <div class="row">
-    <div class="card">
-    <div class="card-body">
-    <h4 class="card-title text-success mb-4" style="font-size: 1.75rem; font-weight: 600;">
-        <i class="fas fa-user-plus me-2"></i>Add New Member
+    <div class="card " style="background-color:#001B07">
+    <div class="card-body ">
+    <h4 class="card-title text-success mb-4" style="font-size: 1.75rem; font-weight: 600; color: #001F77;">
+        <i class="fas fa-user-plus me-2"></i>Register New Agriculture Expert
     </h4>
 
 
@@ -37,15 +37,19 @@
         @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <input style="background-color:#032E0E" type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <input style="background-color:#032E0E" type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                <label for="password" class="form-label">Password</label>
+                <input style="background-color:#032E0E" type="text" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="mb-3">
+                <label for="proffesion" class="form-label">Proffesion</label>
+                <input style="background-color:#032E0E" type="text" class="form-control" id="proffesion" name="proffesion" required>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
