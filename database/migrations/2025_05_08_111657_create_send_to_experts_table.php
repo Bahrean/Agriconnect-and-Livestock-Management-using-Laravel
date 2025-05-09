@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('send_to_experts', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('description');
+            $table->string('status');
             $table->timestamps();
         });
     }
