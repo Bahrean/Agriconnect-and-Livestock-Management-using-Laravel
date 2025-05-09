@@ -12,7 +12,8 @@ class AgricultureExpert extends Model
     protected $fillable = [
         'name',
         'email',
-        'message',
+        'password',
+        'proffesion',
     
     ];
 }
