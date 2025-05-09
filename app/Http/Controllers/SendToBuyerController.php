@@ -33,7 +33,7 @@ class SendToBuyerController extends Controller
         ]);
 
         // Save to local database
-        $marketPrice = SendToFarmer::create($validatedData);
+        $marketPrice = SendToBuyer::create($validatedData);
 
         // Save to Firebase
         $this->saveToFirebase($marketPrice);
@@ -42,7 +42,7 @@ class SendToBuyerController extends Controller
                         ->with('success', 'Information saved successfully!');
     }
 
-    protected function saveToFirebase(SendToFarmer $marketPrice)
+    protected function saveToFirebase(SendToBuyer $marketPrice)
     {
         $database = $this->firebase->getDatabase();
         
