@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Edit Market Price</div>
+                <div class="card-header">Edit Expert Sent</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('send_to_expert.update', $firebaseKey) }}">
@@ -67,7 +67,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Update Market Price
+                                    Update Expert Sent
                                 </button>
                             </div>
                         </div>
