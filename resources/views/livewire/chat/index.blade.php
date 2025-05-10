@@ -69,11 +69,11 @@ License: For each use you must have a valid license purchased only from above li
     <!-- Main Page Content -->
     <div class="page-wrapper d-flex flex-column" style="min-height: 100vh;">
         <div class="row chat-wrapper flex-grow-1">
-            <div class="col-lg-4 col-md-12 chat-aside border-end-lg relative overflow-auto" style="background-color: rgb(111, 133, 185);">
+            <div class="col-lg-4 col-md-12 chat-aside border-end-lg relative overflow-auto" style="background-color: rgb(31, 122, 54);">
                 <livewire:chat.chat-list />
             </div>
 
-            <div class="col-lg-8 col-md-12 chat-content d-flex flex-column align-items-center justify-content-center border-start" style="background-color: rgb(111, 133, 185);">
+            <div class="col-lg-8 col-md-12 chat-content d-flex flex-column align-items-center justify-content-center border-start" style="background-color:rgb(31, 122, 54);">
                 <h2 class="font-medium text-lg" style="color: black;">Choose a conversation to start chatting</h2>
             </div>
         </div>
