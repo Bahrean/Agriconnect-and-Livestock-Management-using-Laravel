@@ -1,4 +1,4 @@
-<div style="background-color:rgb(182, 202, 248)"
+<div style="background-color:rgb(93, 187, 116)"
    x-data="{type:'all',query:@entangle('query')}"
    x-init="
 
@@ -35,7 +35,7 @@
         $id = Auth::user()->id;
         $profileData = App\Models\User::find($id);
     @endphp
-    <header style="background-color: rgb(132, 156, 214)"  class="px-3 z-10 bg-white sticky top-0 w-full py-2">
+    <header style="background-color: rgb(31, 122, 54)"  class="px-3 z-10 bg-white sticky top-0 w-full py-2">
 
     <div class="border-b justify-between flex items-center pb-2">
 
