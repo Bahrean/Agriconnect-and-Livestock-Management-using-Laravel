@@ -19,7 +19,8 @@
                             <tr>
                                 <th style="font-size: 17px; color: white; font-weight: bold;">Name</th>
                                 <th style="font-size: 17px; color: white; font-weight: bold;">Email</th>
-                                <th style="font-size: 17px; color: white; font-weight: bold;">Message</th>
+                                <th style="font-size: 17px; color: white; font-weight: bold;">Password</th>
+                                <th style="font-size: 17px; color: white; font-weight: bold;">Proffesion</th>
                                 <th style="font-size: 17px; color: white; font-weight: bold;">Created At</th>
                                 <th style="font-size: 17px; color: white; font-weight: bold;">Actions</th>
                             </tr>
@@ -29,7 +30,8 @@
                             <tr>
                                         <td>{{ $email['name'] ?? 'N/A' }}</td>
                                         <td>{{ $email['email'] ?? 'N/A' }}</td>
-                                        <td>{{ $email['message'] ?? 'N/A' }}</td>
+                                        <td>{{ $email['password'] ?? 'N/A' }}</td>
+                                        <td>{{ $email['proffesion'] ?? 'N/A' }}</td>
                                         <td>{{ $email['created_at'] ?? 'N/A' }}</td>
                                         <td>
                                             <a href="{{ route('agriexpert.edit', $firebaseKey) }}" class="btn btn-sm btn-primary">Edit</a>
