@@ -1,4 +1,4 @@
-<div style="background-color:rgb(60, 87, 145)"
+<div style="background-color:rgb(93, 187, 116);"
     x-data="{
         height:0,
         conversationElement:document.getElementById('conversation'),
