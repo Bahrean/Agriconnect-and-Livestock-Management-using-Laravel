@@ -566,7 +566,7 @@
           <form class="forms-sample animate__animated animate__fadeIn animate__delay-1s" method="POST" action="{{ route('login') }}">
             @csrf
             <div class="mb-4">
-              <label for="login" class="form-label mb-2">Email, Phone, or Username</label>
+              <label for="login" class="form-label mb-2">Email or Name</label>
               <div class="input-group">
                 <span class="input-group-text">
                   <i class="fas fa-user"></i>
