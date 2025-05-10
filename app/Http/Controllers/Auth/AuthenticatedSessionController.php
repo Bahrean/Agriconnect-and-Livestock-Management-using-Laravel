@@ -41,7 +41,7 @@ class AuthenticatedSessionController extends Controller
                 case 'collage_registral':
                     $url = 'collageregistral/dashboard';
                     break;
-                case 'collage_dean':
+                case 'agri_expert':
                     $url = 'collagedean/dashboard';
                     break;
                 case 'department_head':
