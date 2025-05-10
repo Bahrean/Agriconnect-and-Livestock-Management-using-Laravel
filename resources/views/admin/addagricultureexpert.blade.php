@@ -47,11 +47,22 @@
                 <label for="password" class="form-label">Password</label>
                 <input style="background-color:#032E0E" type="text" class="form-control" id="password" name="password" required>
             </div>
+                <div class="mb-3">
+                    <label class="form-label"><i class="fas fa-venus-mars me-2"></i>Gender</label>
+                    <select style="background-color:#032E0E" class="form-select @error('gender') is-invalid @enderror" name="gender">
+                        <option value="" selected disabled>Select Gender</option>
+                        <option value="male" {{ old('gender') == 'male' ? 'selected' : '' }}>Male</option>
+                        <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
+                    </select>
+                    @error('gender')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                </div>
             <div class="mb-3">
                 <label for="proffesion" class="form-label">Proffesion</label>
                 <input style="background-color:#032E0E" type="text" class="form-control" id="proffesion" name="proffesion" required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div>
+                <button style="font-weight:bold;font-size:20px;" type="submit" class="btn btn-success">Register Now</button>
+            </div>
         </form>
 
 </div>

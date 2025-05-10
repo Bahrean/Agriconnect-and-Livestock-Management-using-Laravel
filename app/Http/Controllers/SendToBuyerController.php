@@ -9,7 +9,6 @@ use Carbon\Carbon;
 
 class SendToBuyerController extends Controller
 {
-    //
 
     protected $firebase;
 
@@ -121,3 +120,5 @@ class SendToBuyerController extends Controller
         }
     }
 }
+
+

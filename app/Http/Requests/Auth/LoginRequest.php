@@ -44,7 +44,7 @@ class LoginRequest extends FormRequest
         $this->ensureIsNotRateLimited();
 
         $user = User::where('email', $this->login)
-            ->orwhere('phone', $this->login)
+        
             ->orwhere('name', $this->login)
             ->first();
 

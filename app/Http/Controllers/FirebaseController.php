@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Kreait\Firebase\Factory;
 use App\Services\FirebaseService;
 use App\Models\AgricultureExpert;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 use Carbon\Carbon;
 
 class FirebaseController extends Controller
@@ -24,10 +26,34 @@ class FirebaseController extends Controller
 
     public function submitForm(Request $request)
     {
+
+        $request->validate([
+            'name' => 'required|unique:users|max:200',
+            'email' => 'required|email|unique:users|max:255',
+            'password' => 'required',
+            'gender' => 'nullable',
+            'proffesion' => 'nullable',
+            
+        
+        
+        ]);
+
+        // Create user with photo path
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'gender' => $request->gender,
+            'proffesion' => $request->proffesion,
+            
+        
+        ]);
+
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string',
             'password' => 'required|string',
+            'gender' => 'required|string',
             'proffesion' => 'required|string',
         
             
@@ -39,7 +65,7 @@ class FirebaseController extends Controller
         // Save to Firebase
         $this->saveToFirebase($message);
 
-        return redirect()->route('firebase.form')
+        return redirect()->route('agriexpert.index')
                         ->with('success', 'New Agriculture Exper Create successfully!');
     }
 
@@ -55,6 +81,7 @@ class FirebaseController extends Controller
                 'name' => $message->name,
                 'email' => $message->email,
                 'password' => $message->password,
+                'gender' => $message->gender,
                 'proffesion' => $message->proffesion,
                 'created_at' => Carbon::now()->toDateTimeString(),
             ]);
