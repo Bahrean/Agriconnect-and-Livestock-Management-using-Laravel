@@ -3,15 +3,21 @@
                         <i data-feather="menu"></i>
                     </a>
                     <div class="navbar-content">
-
+                        <form class="search-form">
+                            <div class="input-group">
+                <div class="input-group-text">
+                  
+                </div>
+                               
+                            </div>
+                        </form>
                         <ul class="navbar-nav">
                 
-                  
-                    
-                            <li class="nav-item dropdown">
-                 
+              
 
-                              
+                            <li class="nav-item dropdown">
+                       
+
                             </li>
                             @php
                                     $id = Auth::user()->id;
@@ -28,7 +34,7 @@
     @endif
 </div>
                                 </a>
-                                <div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
+                                <div style="background-color:#001B07" class="dropdown-menu p-0" aria-labelledby="profileDropdown">
                                     <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
                                         <div class="mb-3">
                                         <div style="position: relative; display: inline-block;">
@@ -47,20 +53,20 @@
                                     </div>
                     <ul class="list-unstyled p-1">
                     <li class="dropdown-item py-2">
-                        <a href="{{route('departmenthead.profile')}}" class="text-body ms-0">
+                        <a href="{{route('collagedean.profile')}}" class="text-body ms-0">
                         <i class="me-2 icon-md" data-feather="user"></i>
                         <span>Profile</span>
                         </a>
                     </li>
                     <li class="dropdown-item py-2">
-                        <a href="{{route('departmenthead.change.password')}}" class="text-body ms-0">
+                        <a href="{{route('collagedean.change.password')}}" class="text-body ms-0">
                         <i class="me-2 icon-md" data-feather="edit"></i>
                         <span>Change Password</span>
                         </a>
                     </li>
-      
+
                     <li class="dropdown-item py-2">
-                        <a href="{{route('departmenthead.logout')}}" class="text-body ms-0">
+                        <a href="{{route('collagedean.logout')}}" class="text-body ms-0">
                         <i class="me-2 icon-md" data-feather="log-out"></i>
                         <span>Log Out</span>
                         </a>

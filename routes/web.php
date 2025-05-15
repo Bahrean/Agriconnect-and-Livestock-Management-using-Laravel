@@ -322,71 +322,71 @@ Route::prefix('send-to-buyer')->group(function () {
 
 });
 
-Route::middleware(['auth', 'role:collage_dean'])->group(function () {
-    Route::get('/collagedean/dashboard', [
+Route::middleware(['auth', 'role:agri_expert'])->group(function () {
+    Route::get('/agri_expert/dashboard', [
         CollageDeanController::class,
         'CollageDeanDashboard',
     ])->name('collagedean.dashboard');
-    Route::get('/collagedean/profile', [
+    Route::get('/agri_expert/profile', [
         CollageDeanController::class,
         'CollageDeanProfile',
     ])->name('collagedean.profile');
-    Route::get('/collagedean/chat', [
+    Route::get('/agri_expert/chat', [
         CollageDeanController::class,
         'CollagedeanChat',
     ])->name('collagedean.chat');
-    Route::get('/collagedean/logout', [
+    Route::get('/agri_expert/logout', [
         CollageDeanController::class,
         'CollagedeanLogout',
     ])->name('collagedean.logout');
-    Route::post('/collagedean/profile/store', [
+    Route::post('/agri_expert/profile/store', [
         CollageDeanController::class,
         'CollagedeanProfileStore',
     ])->name('collagedean.profile.store');
-    Route::get('/collagedean/change/password', [
+    Route::get('/agri_expert/change/password', [
         CollageDeanController::class,
         'CollagedeanChangePassword',
     ])->name('collagedean.change.password');
-    Route::post('/collagedean/update/password', [
+    Route::post('/agri_expert/update/password', [
         CollageDeanController::class,
         'CollagedeanUpdatePassword',
     ])->name('collagedean.update.password');
-    Route::get('/collegedean/showmembers', [
+    Route::get('/agri_expert/showmembers', [
         CollageDeanController::class,
         'CollegeDeanShowMember',
     ])->name('collegedean.showmembers');
-    Route::get('/collegedean/posts', [
+    Route::get('/agri_expert/posts', [
         PostController::class,
         'CollegeDeanPosts',
     ])->name('collegedean.posts');
-    Route::get('/collegedean/showmembers', [
+    Route::get('/agri_expert/showmembers', [
         CollageDeanController::class,
         'CollegeDeanShowMember',
     ])->name('collegedean.showmembers');
 
-    Route::get('/collegedean/collageposts', [
+    Route::get('/agri_expert/collageposts', [
         CollegePostController::class,
         'CollegeDeanCollagePosts',
     ])->name('collegedean.collageposts');
-    Route::get('/collegedean/addcollegepost', [
+    Route::get('/agri_expert/addcollegepost', [
         CollegePostController::class,
         'CollegeDeanAddCollegePost',
     ])->name('collegedean.addcollegepost');
-    Route::post('/collegedean/post/collegestore', [
+    Route::post('/agri_expert/post/collegestore', [
         CollegePostController::class,
         'CollegeDeanCollegePostStore',
     ])->name('collegedean.post.collegestore');
-    Route::get('/collegedean/departmentposts', [
+    Route::get('/agri_expert/departmentposts', [
         DepartmentPostController::class,
         'CollegeDeanDepartmentposts',
     ])->name('collegedean.departmentposts');
 
-    Route::get('/collegedean/adddepartmentpost', [
+    Route::get('/agri_expert/adddepartmentpost', [
         DepartmentPostController::class,
         'DepartmentHeadAddDepartmentPost',
     ])->name('collegedean.adddepartmentpost');
 
-    Route::post('/collegedean/post/departmentstore', [
+    Route::post('/agri_expert/post/departmentstore', [
         DepartmentPostController::class,
         'CollegeDeanDepartmentPostStore',
     ])->name('collegedean.post.departmentstore');

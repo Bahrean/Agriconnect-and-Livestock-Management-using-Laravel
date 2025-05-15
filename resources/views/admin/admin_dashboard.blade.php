@@ -7,7 +7,7 @@
     <meta name="description" content="Responsive Admin Dashboard Template based on Bootstrap 5">
     <meta name="author" content="NobleUI">
     <meta name="keywords" content="nobleui, admin, dashboard, responsive, html, css, bootstrap 5, ui kit, web">
-    <title>Admin Panel | Wollo University Communication</title>
+    <title>Admin Panel |  Communication</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

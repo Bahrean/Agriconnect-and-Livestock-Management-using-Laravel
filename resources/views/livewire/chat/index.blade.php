@@ -17,7 +17,7 @@ License: For each use you must have a valid license purchased only from above li
     <meta name="author" content="NobleUI">
     <meta name="keywords" content="nobleui, bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
-    <title>Admin Panel For Wollo University Inter-Office Communication</title>
+    <title>Admin Panel For Agri Connect and Livestock Management Communication</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,14 +56,10 @@ License: For each use you must have a valid license purchased only from above li
     <!-- Sidebar Based on Role -->
     @if ($profileData->role == 'admin')
         @include('admin.body.sidebar')
-    @elseif ($profileData->role == 'collage_registral')
-        @include('collage_registral.body.sidebar')
-    @elseif ($profileData->role == 'collage_dean')
-        @include('collagedean.body.sidebar')
-    @elseif ($profileData->role == 'department_head')
-        @include('department_head.body.sidebar')
-    @elseif ($profileData->role == 'stuff')
-        @include('stuff.body.sidebar')
+
+    @elseif ($profileData->role == 'agri_expert')
+        @include('agri_expert.body.sidebar')
+
     @endif
 
     <!-- Main Page Content -->

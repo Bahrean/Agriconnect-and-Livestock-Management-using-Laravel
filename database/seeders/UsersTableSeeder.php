@@ -48,7 +48,7 @@ class UsersTableSeeder extends Seeder
                 'status' => 'active',
             ],
 
-            //IT Department Head
+            // Head
             [
                 'name' => 'Mekdes Emagnu',
                 'email' => 'mekdes@gmail.com',

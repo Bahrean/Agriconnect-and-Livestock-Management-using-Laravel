@@ -17,7 +17,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        return view('auth.login');
+        return view("auth.login");
     }
 
     /**
@@ -38,18 +38,11 @@ class AuthenticatedSessionController extends Controller
                 case 'admin':
                     $url = 'admin/dashboard';
                     break;
-                case 'collage_registral':
-                    $url = 'collageregistral/dashboard';
-                    break;
+            
                 case 'agri_expert':
-                    $url = 'collagedean/dashboard';
+                    $url = 'agri_expert/dashboard';
                     break;
-                case 'department_head':
-                    $url = 'departmenthead/dashboard';
-                    break;
-                case 'stuff':
-                    $url = 'stuff/dashboard';
-                    break;
+
                 default:
                     $url = 'unauthorized'; // Optionally redirect to an unauthorized page or handle it
                     break;

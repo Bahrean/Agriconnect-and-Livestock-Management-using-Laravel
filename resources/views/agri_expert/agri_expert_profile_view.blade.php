@@ -1,5 +1,5 @@
-@extends('department_head.department_head_dashboard')
-@section('department_head')
+@extends('agri_expert.agri_expert_dashboard')
+@section('agri_expert')
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -10,7 +10,7 @@
   <!-- left wrapper start -->
   <div class="d-none d-md-block col-md-4 col-xl-4 left-wrapper">
     <div class="card rounded">
-      <div class="card-body">
+      <div class="card-body" style="background-color:#001B07">
         <div class="d-flex align-items-center justify-content-between mb-2">
      
 
@@ -20,7 +20,7 @@
           </div>
 
         </div>
-        <p>Hi! I'm {{$profileData->name}} the Collage head of informatics in KIOT.</p>
+        <p>Hi! I'm {{$profileData->name}} the Agriculture Expert Of Kalu.</p>
         <div class="mt-3">
           <label class="tx-11 fw-bolder mb-0 text-uppercase">Name:</label>
           <p class="text-muted">{{$profileData->name}}</p>
@@ -55,37 +55,37 @@
   <!-- middle wrapper start -->
   <div class="col-md-8 col-xl-8 middle-wrapper">
     <div class="row">
-    <div class="card">
-              <div class="card-body">
+    <div class="card" style="background-color:#001B07">
+              <div class="card-body" style="background-color:#001B07">
 
-								<h6 class="card-title">Update Collage Head Profile</h6>
+								<h6 class="card-title">Update Agriculture Expert Profile</h6>
 
-								<form class="forms-sample" method="POST" action="{{route('departmenthead.profile.store')}}" enctype='multipart/form-data'>
+								<form class="forms-sample" method="POST" action="{{route('collagedean.profile.store')}}" enctype='multipart/form-data'>
 								@csrf	
                 <div class="mb-3">
 										<label for="exampleInputUsername1" class="form-label">Username</label>
-										<input type="text" class="form-control" value="{{$profileData->username}}" name="username" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
+										<input style="background-color:#032E0E"  type="text" class="form-control" value="{{$profileData->username}}" name="username" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
 									</div>
 									<div class="mb-3">
 										<label for="exampleInputEmail1" class="form-label">Name</label>
-										<input type="text" class="form-control" value="{{$profileData->name}}" name="name" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
+										<input style="background-color:#032E0E"  type="text" class="form-control" value="{{$profileData->name}}" name="name" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
 									</div>
                   <div class="mb-3">
 										<label for="exampleInputEmail1" class="form-label"> Email</label>
-										<input type="email" class="form-control" value="{{$profileData->email}}" name="email" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
+										<input style="background-color:#032E0E"  type="email" class="form-control" value="{{$profileData->email}}" name="email" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
 									</div>
                   <div class="mb-3">
 										<label for="exampleInputEmail1" class="form-label"> Phone</label>
-										<input type="text" class="form-control" value="{{$profileData->phone}}" name="phone" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
+										<input style="background-color:#032E0E"  type="text" class="form-control" value="{{$profileData->phone}}" name="phone" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
 									</div>
                   
                   <div class="mb-3">
 										<label for="exampleInputEmail1" class="form-label"> Address</label>
-										<input type="text" class="form-control" value="{{$profileData->address}}" name="address" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
+										<input style="background-color:#032E0E"  type="text" class="form-control" value="{{$profileData->address}}" name="address" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
 									</div>
                   <div class="mb-3">
 										<label for="exampleInputEmail1" class="form-label"> Photo</label>
-                    <input class="form-control" name="photo" type="file" id="image">
+                    <input style="background-color:#032E0E"  class="form-control" name="photo" type="file" id="image">
                   </div>
                   <div class="mb-3">
 										<label for="exampleInputEmail1" class="form-label"> </label>

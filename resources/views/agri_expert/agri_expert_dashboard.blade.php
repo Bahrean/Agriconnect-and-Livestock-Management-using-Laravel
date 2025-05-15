@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Template Name: NobleUI - HTML Bootstrap 5 Admin Dashboard Template
+Template Name: NobleUI - HTML Bootstrap 5 collagedean Dashboard Template
 Author: NobleUI
 Website: https://www.nobleui.com
 Portfolio: https://themeforest.net/user/nobleui/portfolio
@@ -17,7 +17,7 @@ License: For each use you must have a valid license purchased only from above li
 	<meta name="author" content="NobleUI">
 	<meta name="keywords" content="nobleui, bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
-	<title>Stuff Panel For Wollo University Inter-Office Communication</title>
+	<title>Collage Dean Panel For Agri Connect and Livestock Management Communication</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,18 +50,18 @@ License: For each use you must have a valid license purchased only from above li
 
 		<!-- partial:partials/_sidebar.html -->
 
-            @include('stuff.body.sidebar');
+            @include('agri_expert.body.sidebar');
             <!-- partial -->
         
             <div class="page-wrapper">
                         
                 <!-- partial:partials/_navbar.html -->
-                @include('stuff.body.header');
+                @include('agri_expert.body.header');
                 <!-- partial -->
-                @yield('stuff');
+                @yield('agri_expert');
 
                 <!-- partial:partials/_footer.html -->
-                @include('stuff.body.footer')
+                @include('agri_expert.body.footer')
                 <!-- partial -->
             
             </div>

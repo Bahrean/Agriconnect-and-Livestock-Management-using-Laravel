@@ -518,7 +518,7 @@
   </style>
 </head>
 <body>
-  <div class="main-wrapper">
+  <div class="main-wrapper" >
     <!-- Agricultural decorative elements -->
     <div class="agri-decoration leaf-1">
       <i class="fas fa-leaf"></i>
@@ -552,10 +552,10 @@
     </div>
     
     <!-- Particles background -->
-    <div class="particles-container" id="particles-js"></div>
+    <div style="background-color:rgb(1, 19, 5);" class="particles-container" id="particles-js"></div>
     
     <!-- Centered auth container -->
-    <div class="auth-container">
+    <div class="auth-container" >
       <div class="auth-card animate__animated animate__fadeInUp">
         <div class="auth-form-wrapper">
           <div class="agri-logo">

@@ -11,7 +11,7 @@ class CollageDeanController extends Controller
 {
     public function CollageDeanDashboard()
     {
-        return view('collagedean.index');
+        return view('agri_expert.index');
     }
 
     public function CollageDeanLogout(Request $request)
@@ -35,7 +35,7 @@ class CollageDeanController extends Controller
         $profileData = User::find($id);
 
         return view(
-            'collagedean.collage_dean_profile_view',
+            'agri_expert.agri_expert_profile_view',
             compact('profileData')
         );
     }
@@ -74,7 +74,7 @@ class CollageDeanController extends Controller
         $id = Auth::user()->id;
         $profileData = User::find($id);
         return view(
-            'collagedean.collage_dean_change_password',
+            'agri_expert.agri_expert_change_password',
             compact('profileData')
         );
     }
@@ -101,17 +101,17 @@ class CollageDeanController extends Controller
 
     public function CollagedeanChat()
     {
-        return view('collagedean.collagedeanchat');
+        return view('agri_expert.agri_expertchat');
     }
     public function CollagedeanPosts()
     {
-        return view('collagedean.posts');
+        return view('agri_expert.posts');
     }
 
     public function CollegeDeanShowMember()
     {
         $types = User::latest()->get();
-        return view('collagedean.showmember', compact('types'));
+        return view('agri_expert.showmember', compact('types'));
     }
 
     //

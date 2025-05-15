@@ -1,5 +1,5 @@
-@extends('stuff.stuff_dashboard')
-@section('stuff')
+@extends('agri_expert.agri_expert_dashboard')
+@section('agri_expert')
 
 <div class="page-content">
 
