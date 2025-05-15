@@ -5,19 +5,19 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Edit Farmer Sent</div>
+                <div class="card-header">Edit Market Price</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('market-price.update', $firebaseKey) }}">
+                    <form method="POST" action="{{ route('send_to_farmer.update', $firebaseKey) }}">
                         @csrf
                         @method('PUT')
 
                         <div class="form-group row">
-                            <label for="item_name" class="col-md-4 col-form-label text-md-right">Item Name</label>
+                            <label for="title" class="col-md-4 col-form-label text-md-right">Item Name</label>
                             <div class="col-md-6">
-                                <input id="item_name" type="text" class="form-control @error('item_name') is-invalid @enderror" 
-                                    name="item_name" value="{{ old('item_name', $priceData['item_name'] ?? '') }}" required>
-                                @error('item_name')
+                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" 
+                                    name="title" value="{{ old('title', $priceData['title'] ?? '') }}" required>
+                                @error('title')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -26,11 +26,11 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="price" class="col-md-4 col-form-label text-md-right">Price</label>
+                            <label for="description" class="col-md-4 col-form-label text-md-right">Market Location</label>
                             <div class="col-md-6">
-                                <input id="price" type="number" step="0.01" class="form-control @error('price') is-invalid @enderror" 
-                                    name="price" value="{{ old('price', $priceData['price'] ?? 0) }}" required>
-                                @error('price')
+                                <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" 
+                                    name="description" value="{{ old('description', $priceData['description'] ?? '') }}" required>
+                                @error('description')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -39,11 +39,11 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="market_location" class="col-md-4 col-form-label text-md-right">Market Location</label>
+                            <label for="status" class="col-md-4 col-form-label text-md-right">Market Location</label>
                             <div class="col-md-6">
-                                <input id="market_location" type="text" class="form-control @error('market_location') is-invalid @enderror" 
-                                    name="market_location" value="{{ old('market_location', $priceData['market_location'] ?? '') }}" required>
-                                @error('market_location')
+                                <input id="status" type="text" class="form-control @error('status') is-invalid @enderror" 
+                                    name="status" value="{{ old('status', $priceData['status'] ?? '') }}" required>
+                                @error('status')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -63,7 +63,6 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

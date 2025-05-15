@@ -1,20 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-
 use Illuminate\Http\Request;
 
-class CollageRegistralController extends Controller
+class AgriExpertController extends Controller
 {
-    public function CollageRegistralDashboard()
+    public function AgriExpertDashboard()
     {
-        return view('collage_registral.index');
+        return view('agri_expert.index');
     }
 
-    public function CollageRegistralLogout(Request $request)
+    public function AgriExpertLogout(Request $request)
     {
         Auth::guard('web')->logout();
 
@@ -24,23 +24,23 @@ class CollageRegistralController extends Controller
 
         return redirect('/');
     }
-    public function CollageRegistralLogin()
+    public function AgriExpertLogin()
     {
         return view('login');
     }
 
-    public function CollageRegistralProfile()
+    public function AgriExpertProfile()
     {
         $id = Auth::user()->id;
         $profileData = User::find($id);
 
         return view(
-            'collage_registral.collage_registral_profile_view',
+            'agri_expert.agri_expert_profile_view',
             compact('profileData')
         );
     }
 
-    public function CollageRegistralProfileStore(Request $request)
+    public function AgriExpertProfileStore(Request $request)
     {
         $id = Auth::user()->id;
         $data = User::find($id);
@@ -69,17 +69,17 @@ class CollageRegistralController extends Controller
             ->with($notification);
     }
 
-    public function CollageRegistralChangePassword()
+    public function AgriExpertChangePassword()
     {
         $id = Auth::user()->id;
         $profileData = User::find($id);
         return view(
-            'collage_registral.collage_registral_change_password',
+            'agri_expert.agri_expert_change_password',
             compact('profileData')
         );
     }
 
-    public function CollageRegistralUpdatePassword(Request $request)
+    public function AgriExpertUpdatePassword(Request $request)
     {
         if (!Hash::check($request->old_password, auth::user()->password)) {
             $notification = [
@@ -99,19 +99,16 @@ class CollageRegistralController extends Controller
         return back()->with($notification);
     }
 
-    public function CollageRegistralChat()
+    public function AgriExpertChat()
     {
-        return view('collage_registral.collageregistralchat');
-    }
-    public function CollageRegistralPosts()
-    {
-        return view('collage_registral.posts');
+        return view('agri_expert.agri_expertchat');
     }
 
-    public function CollageRegistralShowMember()
+    public function AgriExpertShowMember()
     {
         $types = User::latest()->get();
-        return view('collage_registral.showmember', compact('types'));
+        return view('agri_expert.showmember', compact('types'));
     }
+
     //
 }

@@ -2,15 +2,11 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\CollageDeanController;
-use App\Http\Controllers\CollageRegistralController;
-use App\Http\Controllers\DepartmentHeadController;
+use App\Http\Controllers\AgriExpertController;
 
-use App\Http\Controllers\StuffController;
 use App\Http\ControostController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\CollegePostController;
-use App\Http\Controllers\DepartmentPostController;
+
 use App\Http\Controllers\FirebaseController;
 use App\Http\Controllers\SendToFarmerController;
 use App\Http\Controllers\SendToExpertController;
@@ -203,72 +199,43 @@ Route::prefix('send-to-buyer')->group(function () {
 
 Route::middleware(['auth', 'role:agri_expert'])->group(function () {
     Route::get('/agri_expert/dashboard', [
-        CollageDeanController::class,
-        'CollageDeanDashboard',
+        AgriExpertController::class,
+        'AgriExpertDashboard',
     ])->name('collagedean.dashboard');
     Route::get('/agri_expert/profile', [
-        CollageDeanController::class,
-        'CollageDeanProfile',
+        AgriExpertController::class,
+        'AgriExpertProfile',
     ])->name('collagedean.profile');
     Route::get('/agri_expert/chat', [
-        CollageDeanController::class,
-        'CollagedeanChat',
+        AgriExpertController::class,
+        'AgriExpertChat',
     ])->name('collagedean.chat');
     Route::get('/agri_expert/logout', [
-        CollageDeanController::class,
-        'CollagedeanLogout',
+        AgriExpertController::class,
+        'AgriExpertLogout',
     ])->name('collagedean.logout');
     Route::post('/agri_expert/profile/store', [
-        CollageDeanController::class,
-        'CollagedeanProfileStore',
+        AgriExpertController::class,
+        'AgriExpertProfileStore',
     ])->name('collagedean.profile.store');
     Route::get('/agri_expert/change/password', [
-        CollageDeanController::class,
-        'CollagedeanChangePassword',
+        AgriExpertController::class,
+        'AgriExpertChangePassword',
     ])->name('collagedean.change.password');
     Route::post('/agri_expert/update/password', [
-        CollageDeanController::class,
-        'CollagedeanUpdatePassword',
+        AgriExpertController::class,
+        'AgriExpertUpdatePassword',
     ])->name('collagedean.update.password');
     Route::get('/agri_expert/showmembers', [
-        CollageDeanController::class,
-        'CollegeDeanShowMember',
+        AgriExpertController::class,
+        'AgriExpertShowMember',
     ])->name('collegedean.showmembers');
-    Route::get('/agri_expert/posts', [
-        PostController::class,
-        'CollegeDeanPosts',
-    ])->name('collegedean.posts');
+
     Route::get('/agri_expert/showmembers', [
-        CollageDeanController::class,
-        'CollegeDeanShowMember',
+        AgriExpertController::class,
+        'AgriExpertShowMember',
     ])->name('collegedean.showmembers');
 
-    Route::get('/agri_expert/collageposts', [
-        CollegePostController::class,
-        'CollegeDeanCollagePosts',
-    ])->name('collegedean.collageposts');
-    Route::get('/agri_expert/addcollegepost', [
-        CollegePostController::class,
-        'CollegeDeanAddCollegePost',
-    ])->name('collegedean.addcollegepost');
-    Route::post('/agri_expert/post/collegestore', [
-        CollegePostController::class,
-        'CollegeDeanCollegePostStore',
-    ])->name('collegedean.post.collegestore');
-    Route::get('/agri_expert/departmentposts', [
-        DepartmentPostController::class,
-        'CollegeDeanDepartmentposts',
-    ])->name('collegedean.departmentposts');
-
-    Route::get('/agri_expert/adddepartmentpost', [
-        DepartmentPostController::class,
-        'DepartmentHeadAddDepartmentPost',
-    ])->name('collegedean.adddepartmentpost');
-
-    Route::post('/agri_expert/post/departmentstore', [
-        DepartmentPostController::class,
-        'CollegeDeanDepartmentPostStore',
-    ])->name('collegedean.post.departmentstore');
 });
 
 
