@@ -7,8 +7,8 @@
     <nav class="page-breadcrumb mb-4">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="{{ route('admin.addmember') }}" class="btn btn-outline-success">
-                    <i class="fas fa-user-plus"></i> Add New Member
+                <a href="#" class="btn btn-outline-success">
+                    <i class="fas fa-user-plus"></i> All Staff Member
                 </a>
             </li>
         </ol>
@@ -20,7 +20,7 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h6 class="card-title text-center" style="color: yellow; font-size: 20px;">
-                        <i class="fas fa-users"></i> All Members
+                        <i class="fas fa-users"></i>Show All Staff Members
                     </h6>
 
                     <div class="table-responsive">
@@ -60,12 +60,12 @@
                                         <td>
                                             <div class="d-flex gap-2">
                                                 <a href="{{ route('admin.editmember', $items->id) }}" 
-                                                   class="btn btn-outline-warning btn-sm">
-                                                   <i class="fas fa-edit"></i> Edit
+                                                    class="btn btn-outline-warning btn-sm">
+                                                    <i class="fas fa-edit"></i> Edit
                                                 </a>
                                                 <a href="{{ route('admin.deletemember', $items->id) }}" 
-                                                   class="btn btn-outline-danger btn-sm" id="delete">
-                                                   <i class="fas fa-trash"></i> Delete
+                                                    class="btn btn-outline-danger btn-sm" id="delete">
+                                                    <i class="fas fa-trash"></i> Delete
                                                 </a>
                                             </div>
                                         </td>
