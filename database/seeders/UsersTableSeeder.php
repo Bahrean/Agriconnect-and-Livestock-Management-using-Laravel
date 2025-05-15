@@ -21,54 +21,22 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Admin',
             
                 'email' => 'admin@gmail.com',
-                'password' => Hash::make('111'),
+                'password' => Hash::make('123456'),
                 'role' => 'admin',
                 'status' => 'active',
             
             ],
 
-            //informatics collage registral
-            [
-                'name' => 'Anduamlak Dilnessa',
-
-                'email' => 'anduamlak@gmail.com',
-                'password' => Hash::make('111'),
-        
-                'role' => 'collage_registral',
-                'status' => 'active',
-            ],
-
-            //informatics collage dean
+            //Agriculture Expert
             [
                 'name' => 'Agriculture Expert',
                 'email' => 'agriexpert@gmail.com',
-                'password' => Hash::make('111'),
-  
+                'password' => Hash::make('123456'),
+
                 'role' => 'agri_expert',
                 'status' => 'active',
             ],
 
-            // Head
-            [
-                'name' => 'Mekdes Emagnu',
-                'email' => 'mekdes@gmail.com',
-                'password' => Hash::make('111'),
-    
-                'role' => 'department_head',
-                'status' => 'active',
-            ],
-
-            //users                   //admin
-            [
-                'name' => 'Tsehay Taso',
-                'email' => 'tsehay@gmail.com',
-                'password' => Hash::make('111'),
-    
-                'role' => 'stuff',
-                'status' => 'active',
-            ],
         ]);
-
-        //
     }
 }
